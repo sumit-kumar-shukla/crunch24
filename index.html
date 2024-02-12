@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstraxap CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/con/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/con/img/theax-favicon.png">
+
+
+    <title> Code Crunch 24 </title>
+
+
+</head>
+
+<body>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark secondary-navbar">
+        <div class="secondary-navbar-text mr-auto">
+            <span> Reach us to cf-info@theax.in or via the Support Page</span>
+
+            <div class="session-timer">
+                Session Expires In: <span id="sessionTimer">15:00</span> secs
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!--Primary Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <a class="navbar-brand" href="#">
+            <img src="/con/img/ibm ice logo.jpg" width="120" height="400" class="d-inline-block align-top" alt="">
+        </a>
+        <!-- <a class="navbar-brand" href="#">Code Crunch 24</a> -->
+        <!-- <span class="flag-icon flag-icon-in" style="font-size: 15px; margin-left: 2px;"></span> -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Problem Statements
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Submitted Solutions</a>
+                        <a class="dropdown-item" href="#">Add Solutions</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Evaluation Status</a>
+                </li>
+            </ul>
+
+            <!-- Profile section -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Profile Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <br> <br>
+
+    <!-- <div class="container">
+        <h3> Welcome to the Registeration Portal !</h3>
+        <hr>
+
+        <form action="storedata.php" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input placeholder="John" type="text" class="form-control" id="inputFirstName" name="firstname">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input placeholder="Doe" type="text" class="form-control" id="inputLastName" name="lastname">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="email">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputUsername">Enter username</label>
+                    <input placeholder="use letters and numbers " type="text" class="form-control" id="inputUsername"
+                        name="username">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="password">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="inputConfirmPassword" name="confirm_password">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputBranch">Branch</label>
+                    <select id="inputBranch" class="form-control" name="branch">
+                        <option selected>Choose...</option>
+                        <option>B.Sc</option>
+                        <option>M.Sc</option>
+                        <option>BCA</option>
+                        <option>MCA</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputYear">Year</label>
+                    <select id="inputYear" class="form-control" name="year">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>NA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        I agree to the Terms and Conditions
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
+    </div> -->
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <footer class="footer bg-primary text-white">
+        <div class=" container">
+        <span>© 2024 Theax Code Fest. All Rights Reserved. Designed by <b>Techvimaan</b> | Powered by <b>Theax</b> for
+            Code Fest</span>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="assets/js/feather.min.js"></script>
+
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="assets/plugins/apexchart/chart-data.js"></script>
+
+    <script src="con/js/script.js"></script>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    
+
+</body>
+
+</html>

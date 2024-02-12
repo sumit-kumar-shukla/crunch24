@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="POS - Bootstrap Admin Template">
+    <meta name="keywords"
+        content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
+    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+    <meta name="robots" content="noindex, nofollow">
+    <title>CODEFEST-ORG</title>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/theax-favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!--STUDENT DASH-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/theax-favicon.png">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!--NAVBARS-->
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark secondary-navbar">
+        <div class="secondary-navbar-text mr-auto">
+            <span> Reach us to info@ibm-ice.in or via the Support Page</span>
+
+            <div class="session-timer">
+                Session Expires In: <span id="sessionTimer">30:00</span> secs
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!--Primary Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <a class="navbar-brand" href="#">
+            <img src="con/img/ibm ice logo.jpg" width="200" height="70" class="img d-inline-block align-top" alt="">
+        </a>
+        <a class="navbar-brand" href="#"> CodeCrunch U-Dash</a>
+        <span class="flag-icon flag-icon-in" style="font-size: 15px; margin-left: 2px;"></span>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/dash.html"> Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/ps.html">Problem Statements</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+            </ul>
+
+            <!-- Profile section -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Profile Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="page-header">
+                <div class="page-title">
+                    <br>
+                    <h4>Submit LLD </h4>
+                    <h6> Upload the Low Level Designs. To see the format please download it below. </h6>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="requiredfield">
+                        <h4>LLD must be in given format only</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-12">
+                            <div class="form-group">
+                                <a class="btn btn-submit w-100">Download LLD Format</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <form method="post" action="bulkPS.php" enctype="multipart/form-data"
+                                onsubmit="return validateForm() && return validateCSV()">
+                                <div class="form-group">
+                                    <label> Upload LLD</label>
+                                    <div class="image-upload">
+                                        <input type="file" name="csv_file" accept=".csv"
+                                            onchange="displayFileName(this)">
+                                        <div class="image-uploads">
+                                            <img src="assets/img/icons/upload.svg" alt="img">
+                                            <h4 id="selectedFileName">Drag and drop the file to upload</h4>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-submit">Submit</button>
+                                    <a href="javascript:void(0);" class="btn btn-cancel"
+                                        onclick="resetForm()">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- <div class="page-wrapper">
+        <div class="content">
+
+            <section class="comp-section">
+                <div class="section-header">
+                    <h3 class="section-title"> Problem Statements ! </h3>
+                    <div class="line"></div>
+                </div>
+
+            </section>
+
+
+            
+
+            <div class="row">
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="ribbon ribbon-secondary">
+                            <i class="fa fa-eye"></i> Live
+                        </div>
+                        <br><br>
+                        <h4 class="card-title">Problem Statements</h4>
+                        <div class="table-responsive">
+                            <table class="table datanew">
+                                <thead>
+                                    <tr>
+                                        <th>S. No.</th>
+                                        <th>PSID</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Domain</th>
+                                        <th>Status</th>
+                                        <th>Posted on</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        
+                        
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    </div> -->
+
+
+    <!--Footer Class-->
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <span>© 2024 IBM India Corporation. All Rights Reserved. Designed and Developed by <b>Theax</b> for <b>IBM
+                    Innovation Centre for Education</b></span>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="assets/plugins/apexchart/chart-data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/assets/js/udash.js"></script>
+    <script src="assets/js/hide.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/toast.js"></script>
+
+
+</body>
+
+</html>
