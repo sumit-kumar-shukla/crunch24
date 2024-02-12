@@ -1,0 +1,52 @@
+table.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    /* Add some margin to the top */
+}
+
+table.custom-table th,
+table.custom-table td {
+    padding: 10px;
+    border: 2px solid #ddd;
+    white-space: nowrap;
+    /* Prevent text wrapping by default */
+}
+
+table.custom-table .wrap-text {
+    white-space: normal;
+    /* Allow text wrapping for elements with this class */
+}
+
+table.custom-table th {
+    background-color: #f2f2f2;
+    /* Light gray background for header cells */
+    font-weight: bold;
+    color: #333;
+    /* Dark text color for header cells*/
+    max-width: 5%;
+}
+
+/* Custom styles for the specific table with the "custom-table" class */
+  table.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add some margin to the top */
+}
+
+table.custom-table th, table.custom-table td {
+    padding: 10px;
+    border: 2px solid #ddd;
+    white-space: nowrap; /* Prevent text wrapping by default */
+}
+
+table.custom-table .wrap-text {
+    white-space: normal; /* Allow text wrapping for elements with this class */
+}
+
+table.custom-table th {
+    background-color: #f2f2f2; /* Light gray background for header cells */
+    font-weight: bold;
+    color: #333; /* Dark text color for header cells*/
+    max-width: 5%;
+}

@@ -1,0 +1,31 @@
+.page-wrapper {
+    padding: 60px 0 0;
+    padding-top: 0;
+
+}
+
+@media (max-width: 991px) {
+    .page-wrapper {
+        padding: 15px;
+    }
+}
+
+.page-wrapper .content {
+    padding: 25px;
+}
+
+@media (max-width: 991px) {
+    .page-wrapper .content {
+        padding: 15px;
+    }
+}
+
+.sidebarrightmenu .page-wrapper {
+    margin: 0 0 0 350px;
+}
+
+@media (max-width: 991px) {
+    .sidebarrightmenu .page-wrapper {
+        margin: 0;
+    }
+}

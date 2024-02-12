@@ -1,0 +1,15 @@
+.custom-modal-dialog {
+    max-width: 1200px;
+    height: 800px;/* Adjust the width as needed */
+    
+}
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: azo-sans; 
+    color: #000000; /* Change to your preferred color */
+    text-transform: uppercase;
+    text-size-adjust: 100%;
+    line-height: 30px;
+    display: block;
+}
